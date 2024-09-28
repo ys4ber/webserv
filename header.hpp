@@ -21,38 +21,3 @@
 #include <fstream>      // ifstream
 #include <sstream>      // istringstream
 #include <cstdlib>      // atoi
-
-
-typedef struct s_location
-{
-    std::string path;
-    std::string cgi;
-    std::string root;
-    std::string index;
-    std::string error;
-} t_location;
-
-typedef struct s_data
-{
-    int port;
-    int fd;
-    int pid;
-    int status;
-    std::string path;
-    std::string cgi;
-    std::string root;
-    std::string index;
-    std::string error;
-    std::string server_name;
-    t_location location;
-} t_data;
-
-typedef struct s_serv
-{
-    t_data data;
-    struct s_serv *next;
-} t_serv;
-
-
-
-
